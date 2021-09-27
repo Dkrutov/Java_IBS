@@ -20,7 +20,7 @@ public class Main    {
         array1[array1.length-1]=c;
         System.out.println("Элемент №0: " + array1[0]);
         System.out.println("Элемент №4: " + array1[4]);
-        sum = array1[0] + array1[array1.length/2];
+        sum = array1[0] + array1[(array1.length-1)/2];
         System.out.println("Сумма последнего и среднего элемента: " + sum);
     }
 }
