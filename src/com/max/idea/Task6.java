@@ -77,10 +77,10 @@ public class Task6 {
             kgfunt = arraykofmass[0] * num;
             kgunc = arraykofmass[1] * num;
             kgpud = arraykofmass[2] * num;
-            arraykofmass[0] = num;
-            arraykofmass[1] = kgfunt;
-            arraykofmass[2] = kgunc;
-            arraykofmass[3] = kgpud;
+            arraymass[0] = num;
+            arraymass[1] = kgfunt;
+            arraymass[2] = kgunc;
+            arraymass[3] = kgpud;
             return arraymass;
         } else if (mass==2) {
             funtkg = arraykofmass[3] * num;
