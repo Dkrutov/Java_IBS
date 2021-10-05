@@ -1,25 +1,27 @@
 package com.max.idea;
+import java.text.DecimalFormat;
 import java.util.Scanner;
 public class Task6 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
+        DecimalFormat dF = new DecimalFormat( "#.#####" );
         System.out.println("Выберите что переводить: 1 - масса, 2 - расстояние");
         int units = in.nextInt();
         if (units==2) {
             System.out.println("Выберите единицу измерения: 1 - метр, 2 - миля, 3 - ярд, 4 - фут");
             int dist = in.nextInt();
             System.out.println("Введите число");
-            int num = in.nextInt();
+            double num = in.nextDouble();
             double[] arraydist = dist(dist,num);
-            System.out.printf("Результат:\n Метры:%.5f \n Мили:%.5f \n Ярды:%.5f \n Футы:%.5f \n", arraydist[0],arraydist[1],arraydist[2],arraydist[3]);
+            System.out.println("  Результат:\nМетры: " + dF.format(arraydist[0]) + "\nМили: " + dF.format(arraydist[1]) + "\nЯрды: " + dF.format(arraydist[2]) +"\nФуты: "+ dF.format(arraydist[3]));
         }
             else if (units==1){
             System.out.println("Выберите единицу измерения: 1 - килограмм, 2 - фунт, 3 - унция, 4 - пуд");
             int mass = in.nextInt();
             System.out.println("Введите число");
-            int num = in.nextInt();
+            double num = in.nextDouble();
             double[] arraymass = mass(mass,num);
-            System.out.printf("Результат:\n Килограммы:%.5f \n Фунты:%.5f \n Унции:%.5f \n Пуды:%.5f \n", arraymass[0],arraymass[1],arraymass[2],arraymass[3]);
+            System.out.println("  Результат:\nКилограммы: " + dF.format(arraymass[0]) + "\nФунты: " + dF.format(arraymass[1]) + "\nУнции: " + dF.format(arraymass[2]) +"\nПуды: "+ dF.format(arraymass[3]));
         } else {
             System.out.println("Некорректные данные!");
         }
