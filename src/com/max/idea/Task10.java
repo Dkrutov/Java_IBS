@@ -15,15 +15,6 @@ public class Task10 {
                 array2[i][j]=in.nextDouble();
             }
         }
-        /*
-        for (int i=0;i<lengthArrayX;i++) {
-            for (int j=0;j<lengthArrayY;j++) {
-                System.out.println( i +", "+ j +" элемент массива: " + array2[i][j]);
-            }
-            System.out.println(" ");
-        }
-        */
-
         System.out.println(Arrays.deepToString(array2));
             for (int j=0;j<lengthArrayY;j++) {
                 System.out.println( 0 +" "+ j +" элемент массива * 3 = " + array2[0][j]*3);
