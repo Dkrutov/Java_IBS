@@ -13,12 +13,6 @@ public class Task8 {
                 sum+= array1[i];
             }
         }
-        /*
-        System.out.println("Массив заполнен!");
-        for (int i=0;i<lengthArray;i++) {
-            System.out.println("" + i + " элемент= " + array1[i]);
-        }
-         */
         System.out.println("Сумма всех нечетных чисел = " + sum);
 
     }
