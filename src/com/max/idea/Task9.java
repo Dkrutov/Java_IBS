@@ -11,11 +11,6 @@ public class Task9 {
             array1[i]=in.nextDouble();
         }
         System.out.println("Массив заполнен!");
-       /*
-        for (int i=0;i<lengthArray;i++) {
-            System.out.println("" + i + " элемент= " + array1[i]);
-        }
-        */
         double sum=0;
         for (int i=0;i<lengthArray;i++) {
             sum+=array1[i];
