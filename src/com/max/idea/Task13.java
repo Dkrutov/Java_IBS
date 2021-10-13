@@ -5,22 +5,26 @@ public class Task13 {
         Scanner in = new Scanner(System.in);
         System.out.println("Введите текст:");
         String str = in.nextLine();
-        String[] en = {"a", "b", "c"};
-        String[] EN = {"A", "B", "C"};
-        String[] result = str.split(" ");
-        for (int i=0;i<result.length;i++) {
-            System.out.println(i + result[i]);
-        }
-        int sum = 0;
-        for (int i=0;i<result.length;i++) {
-            for (int j=0;j<en.length;j++) {
-            if (result[i].contains(en[j])) {
-                sum+=1;
-                System.out.println( (i+1) + " Латинское слово: " + result[i]);
-                break;
+        char[] en = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
+        String[] arrayWord = str.split(" ");
+        int sumWord = 0;
+        for (int i = 0; i < arrayWord.length; i++) {
+            int sumSym = 0;
+            int numSym = arrayWord[i].length();
+            String sword = arrayWord[i].toLowerCase();
+            for (int j = 0; j < numSym; j++) {
+                char sym = sword.charAt(j);
+                for (int k = 0; k < en.length; k++) {
+                    if (sym == en[k]) {
+                        sumSym+=1;
+                    }
+                }
             }
+            if (sumSym == numSym) {
+                sumWord+= 1;
+                System.out.println("\n " + (i + 1) + " слово только на латинице: " + arrayWord[i]);
             }
         }
-        System.out.println("Число латинских слов= " + sum);
+        System.out.println("Число слов латиницей = " + sumWord);
     }
 }
