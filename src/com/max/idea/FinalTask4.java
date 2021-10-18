@@ -8,9 +8,9 @@ public class FinalTask4 {
         System.out.println("Количество попыток осталось: " + count);
         System.out.println("Введите ответ:");
         String otgadka = in.nextLine();
-        if (otgadka.equals("Заархивированный вирус")) {
+        if (otgadka.equals("Заархивированный вирус")||otgadka.equals("заархивированный вирус")) {
             count=0;
-        } else if (otgadka.equals("Подсказка")) {
+        } else if (otgadka.equals("Подсказка")||otgadka.equals("подсказка")) {
             System.out.println("Подсказка: Это не связано с луком");
             count=1;
             System.out.println("Количество попыток осталось: " + count);
@@ -22,9 +22,9 @@ public class FinalTask4 {
         while (count>=1) {
             System.out.println("Введите ответ:");
             otgadka = in.nextLine();
-            if (otgadka.equals("Заархивированный вирус")) {
+            if (otgadka.equals("Заархивированный вирус")||otgadka.equals("заархивированный вирус")) {
                 break;
-            } else if (otgadka.equals("Подсказка")) {
+            } else if (otgadka.equals("Подсказка")||otgadka.equals("подсказка")) {
                 System.out.println("Подсказка уже недоступна");
                 System.out.println("Количество попыток осталось: " + count);
             } else {
@@ -37,7 +37,7 @@ public class FinalTask4 {
                 }
             }
         }
-        if (otgadka.equals("Заархивированный вирус")) {
+        if (otgadka.equals("Заархивированный вирус")||otgadka.equals("заархивированный вирус")) {
             System.out.println("Правильно!");
         } else {
             System.out.println("Обидно, приходи в другой раз");
